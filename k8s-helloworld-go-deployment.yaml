@@ -5,7 +5,7 @@ metadata:
   labels:
     app: helloworld-go
 spec:
-  replicas: 3
+  replicas: 1
   selector:
     matchLabels:
       app: helloworld-go
@@ -19,3 +19,6 @@ spec:
         image: evanscastonguay/helloworld-go
         ports:
         - containerPort: 80
+        env:
+        - name: version
+          value: "2"
