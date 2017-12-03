@@ -4,6 +4,7 @@ Demo of k8s deployment file following tutorial https://www.youtube.com/watch?v=u
 See alone spinnaker https://www.youtube.com/watch?v=wAdmWtC7yGw
 
 See also spinnaker template https://www.youtube.com/watch?v=JU5yFLzGWAE
+
 See https://github.com/spinnaker/pipeline-templates
 
 https://www.youtube.com/watch?v=qamtiWa-Cy4
