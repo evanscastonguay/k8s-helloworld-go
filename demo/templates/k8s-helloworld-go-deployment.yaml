@@ -1,0 +1,26 @@
+apiVersion: apps/v1beta1 # for versions before 1.8.0 use apps/v1beta1
+kind: Deployment
+metadata:
+  name: {{ template "fullname" . }}-helloworld-go-deployment
+  labels:
+    app: helloworld-go
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: helloworld-go
+      chart: {{ template "fullname" . }}
+  template:
+    metadata:
+      labels:
+        app: helloworld-go
+        chart: {{ template "fullname" . }}
+    spec:
+      containers:
+      - name: helloworld-go
+        image: evanscastonguay/helloworld-go
+        ports:
+        - containerPort: 80
+        env:
+        - name: version
+          value: "2"
